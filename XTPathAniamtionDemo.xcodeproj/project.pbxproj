@@ -15,6 +15,8 @@
 		93B871BE1EE6AC87009BBD34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B871BC1EE6AC87009BBD34 /* LaunchScreen.storyboard */; };
 		93B871C91EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871C81EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m */; };
 		93B871D41EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871D31EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m */; };
+		93F168D81EEC1C80008D29E2 /* DrawBezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F168D71EEC1C80008D29E2 /* DrawBezierView.m */; };
+		93F168DA1EEC54A5008D29E2 /* DrawBezierView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93F168D91EEC54A5008D29E2 /* DrawBezierView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		93B871CF1EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTPathAniamtionDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B871D31EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTPathAniamtionDemoUITests.m; sourceTree = "<group>"; };
 		93B871D51EE6AC87009BBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93F168D61EEC1C80008D29E2 /* DrawBezierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierView.h; sourceTree = "<group>"; };
+		93F168D71EEC1C80008D29E2 /* DrawBezierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierView.m; sourceTree = "<group>"; };
+		93F168D91EEC54A5008D29E2 /* DrawBezierView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawBezierView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,9 @@
 				93B871B21EE6AC87009BBD34 /* AppDelegate.m */,
 				93B871B41EE6AC87009BBD34 /* ViewController.h */,
 				93B871B51EE6AC87009BBD34 /* ViewController.m */,
+				93F168D61EEC1C80008D29E2 /* DrawBezierView.h */,
+				93F168D71EEC1C80008D29E2 /* DrawBezierView.m */,
+				93F168D91EEC54A5008D29E2 /* DrawBezierView.xib */,
 				93B871B71EE6AC87009BBD34 /* Main.storyboard */,
 				93B871BA1EE6AC87009BBD34 /* Assets.xcassets */,
 				93B871BC1EE6AC87009BBD34 /* LaunchScreen.storyboard */,
@@ -248,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B871BE1EE6AC87009BBD34 /* LaunchScreen.storyboard in Resources */,
+				93F168DA1EEC54A5008D29E2 /* DrawBezierView.xib in Resources */,
 				93B871BB1EE6AC87009BBD34 /* Assets.xcassets in Resources */,
 				93B871B91EE6AC87009BBD34 /* Main.storyboard in Resources */,
 			);
@@ -275,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B871B61EE6AC87009BBD34 /* ViewController.m in Sources */,
+				93F168D81EEC1C80008D29E2 /* DrawBezierView.m in Sources */,
 				93B871B31EE6AC87009BBD34 /* AppDelegate.m in Sources */,
 				93B871B01EE6AC87009BBD34 /* main.m in Sources */,
 			);

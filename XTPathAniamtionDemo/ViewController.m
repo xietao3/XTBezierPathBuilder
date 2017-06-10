@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "DrawBezierView.h"
 
-static const NSInteger pointLimitNumber = 4;
+static const NSInteger pointLimitNumber = 7;
 
 @interface ViewController ()
 @property (nonatomic, strong) CADisplayLink *displayLink;
@@ -29,16 +30,21 @@ static const NSInteger pointLimitNumber = 4;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    _bezierPointPath = UIBezierPath.bezierPath;
-    _bezierPath = UIBezierPath.bezierPath;
+    
+    DrawBezierView *view = [[DrawBezierView alloc] initWithFrame:self.view.bounds];
+    [self.view addSubview:view];
+    return;
+    
 
-    _points = [[NSMutableArray alloc] init];
-    _progress = 0;
-    _speed = 0.01;
-    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateDisplayLink)];
-    [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
-    self.displayLink.paused = YES;
+//    _bezierPointPath = UIBezierPath.bezierPath;
+//    _bezierPath = UIBezierPath.bezierPath;
+//
+//    _points = [[NSMutableArray alloc] init];
+//    _progress = 0;
+//    _speed = 0.01;
+//    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateDisplayLink)];
+//    [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+//    self.displayLink.paused = YES;
 }
 
 
@@ -141,26 +147,26 @@ static const NSInteger pointLimitNumber = 4;
 
 
 #pragma mark - Touchs
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
-    [self checkBezierPointCount];
-    
-    UITouch *touch = [touches anyObject];
-    CGPoint touchPoint = [touch locationInView:self.view];
-    if (self.points.count == 0) {
-        [_bezierPointPath moveToPoint:touchPoint];
-    }else{
-        [_bezierPointPath addLineToPoint:touchPoint];
-    }
-    [_bezierPointPath addArcWithCenter:touchPoint radius:2.0 startAngle:0 endAngle:0.1*M_PI clockwise:NO];
-    [self.points addObject:[NSValue valueWithCGPoint:touchPoint]];
-    [self updatePointBezierPath];
-    
-    if (_points.count == pointLimitNumber) {
-        _progress = 0;
-        [self startDisplayLink];
-    }
-
-}
+//- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
+//    [self checkBezierPointCount];
+//    
+//    UITouch *touch = [touches anyObject];
+//    CGPoint touchPoint = [touch locationInView:self.view];
+//    if (self.points.count == 0) {
+//        [_bezierPointPath moveToPoint:touchPoint];
+//    }else{
+//        [_bezierPointPath addLineToPoint:touchPoint];
+//    }
+//    [_bezierPointPath addArcWithCenter:touchPoint radius:2.0 startAngle:0 endAngle:0.1*M_PI clockwise:NO];
+//    [self.points addObject:[NSValue valueWithCGPoint:touchPoint]];
+//    [self updatePointBezierPath];
+//    
+//    if (_points.count == pointLimitNumber) {
+//        _progress = 0;
+//        [self startDisplayLink];
+//    }
+//
+//}
 
 - (void)updatePointBezierPath {
     if (_bezierPointLayer) {

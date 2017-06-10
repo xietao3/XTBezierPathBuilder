@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DrawBezierView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkt-0P-YCg">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="100"/>
+                    <subviews>
+                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZOm-eS-1fm">
+                            <rect key="frame" x="10" y="10" width="94" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="94" id="Faa-r9-Sl7"/>
+                                <constraint firstAttribute="height" constant="29" id="LGR-D7-QjI"/>
+                            </constraints>
+                            <connections>
+                                <action selector="stepperValueChangedAction:" destination="iN0-l3-epB" eventType="valueChanged" id="WzR-7p-aWB"/>
+                            </connections>
+                        </stepper>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2阶" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zjf-Pr-2sA">
+                            <rect key="frame" x="114" y="14.5" width="40" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="Yeq-1c-6CB"/>
+                                <constraint firstAttribute="height" constant="20" id="xVq-hQ-7Vc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="ZOm-eS-1fm" firstAttribute="leading" secondItem="kkt-0P-YCg" secondAttribute="leading" constant="10" id="5N1-gS-hzl"/>
+                        <constraint firstItem="ZOm-eS-1fm" firstAttribute="top" secondItem="kkt-0P-YCg" secondAttribute="top" constant="10" id="REQ-M8-eWb"/>
+                        <constraint firstAttribute="height" constant="100" id="Zst-Lt-BVU"/>
+                        <constraint firstItem="Zjf-Pr-2sA" firstAttribute="leading" secondItem="ZOm-eS-1fm" secondAttribute="trailing" constant="10" id="m8d-Zh-paQ"/>
+                        <constraint firstItem="Zjf-Pr-2sA" firstAttribute="centerY" secondItem="ZOm-eS-1fm" secondAttribute="centerY" id="qR0-dm-m7J"/>
+                        <constraint firstAttribute="width" constant="240" id="rS3-fh-c5u"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kkt-0P-YCg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="FG0-RF-FzN"/>
+                <constraint firstItem="kkt-0P-YCg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sj2-gF-Yno"/>
+            </constraints>
+            <connections>
+                <outlet property="bezierLevelLabel" destination="Zjf-Pr-2sA" id="qJQ-2R-9WH"/>
+            </connections>
+        </view>
+    </objects>
+</document>
