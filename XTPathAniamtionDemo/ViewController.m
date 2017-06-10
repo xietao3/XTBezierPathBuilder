@@ -7,9 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "UIBezierPath+getAllPoints.h"
 
-static const NSInteger pointLimitNumber = 5;
+static const NSInteger pointLimitNumber = 4;
 
 @interface ViewController ()
 @property (nonatomic, strong) CADisplayLink *displayLink;

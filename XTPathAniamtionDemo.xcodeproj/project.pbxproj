@@ -15,7 +15,6 @@
 		93B871BE1EE6AC87009BBD34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B871BC1EE6AC87009BBD34 /* LaunchScreen.storyboard */; };
 		93B871C91EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871C81EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m */; };
 		93B871D41EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871D31EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m */; };
-		93C3CEF71EE7D40800E035F0 /* UIBezierPath+getAllPoints.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C3CEF61EE7D40800E035F0 /* UIBezierPath+getAllPoints.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +51,6 @@
 		93B871CF1EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTPathAniamtionDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B871D31EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTPathAniamtionDemoUITests.m; sourceTree = "<group>"; };
 		93B871D51EE6AC87009BBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93C3CEF51EE7D40800E035F0 /* UIBezierPath+getAllPoints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+getAllPoints.h"; sourceTree = "<group>"; };
-		93C3CEF61EE7D40800E035F0 /* UIBezierPath+getAllPoints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+getAllPoints.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,8 +105,6 @@
 				93B871B21EE6AC87009BBD34 /* AppDelegate.m */,
 				93B871B41EE6AC87009BBD34 /* ViewController.h */,
 				93B871B51EE6AC87009BBD34 /* ViewController.m */,
-				93C3CEF51EE7D40800E035F0 /* UIBezierPath+getAllPoints.h */,
-				93C3CEF61EE7D40800E035F0 /* UIBezierPath+getAllPoints.m */,
 				93B871B71EE6AC87009BBD34 /* Main.storyboard */,
 				93B871BA1EE6AC87009BBD34 /* Assets.xcassets */,
 				93B871BC1EE6AC87009BBD34 /* LaunchScreen.storyboard */,
@@ -282,7 +277,6 @@
 				93B871B61EE6AC87009BBD34 /* ViewController.m in Sources */,
 				93B871B31EE6AC87009BBD34 /* AppDelegate.m in Sources */,
 				93B871B01EE6AC87009BBD34 /* main.m in Sources */,
-				93C3CEF71EE7D40800E035F0 /* UIBezierPath+getAllPoints.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
