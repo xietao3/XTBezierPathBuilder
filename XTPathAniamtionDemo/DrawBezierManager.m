@@ -14,6 +14,8 @@
 @property (nonatomic, strong) CADisplayLink *displayLink;
 // 进度
 @property (nonatomic, assign) CGFloat progress;
+// 速度
+@property (nonatomic, assign) CGFloat speed;
 // 最终贝塞尔曲线的点的集合
 @property (nonatomic, strong) NSMutableArray *bezierPathPoints;
 // 中间阶层的点的集合 二阶数组
@@ -47,6 +49,7 @@
 
     _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateDisplayLink)];
     [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+//    _displayLink.preferredFramesPerSecond = 60;
     _displayLink.paused = YES;
     
     _progress = 0;
@@ -82,6 +85,8 @@
     _progress = progress;
     _subLevelPoints = [self getAllPointsWithOriginPoints:_touchPoints progress:_progress];
     NSInteger count = progress*100+1;
+    count = MIN(count, _bezierPathPoints.count);
+    
     _tempBezierPathPoints = [NSMutableArray array];
     for (int i = 0; i < count; i++) {
         [_tempBezierPathPoints addObject:_bezierPathPoints[i]];
@@ -96,12 +101,6 @@
 
 
 #pragma mark - PrivateMethod
-- (void)updateViewDisplay {
-    if (_drawRectBlock) {
-        _drawRectBlock(_subLevelPoints,_bezierPathPoints);
-    }
-}
-
 - (void)updateDisplayLink {
     [self checkDisplayLineStop];
     
@@ -126,6 +125,12 @@
             [weakSelf updateViewDisplay];
         });
         return;
+    }
+}
+
+- (void)updateViewDisplay {
+    if (_drawRectBlock) {
+        _drawRectBlock(_subLevelPoints,_bezierPathPoints);
     }
 }
 

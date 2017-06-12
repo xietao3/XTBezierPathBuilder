@@ -15,8 +15,6 @@ typedef void(^DrawRectBlock)(NSArray *subLevelPoints,NSArray *bezierPathPoints);
 
 // 刷新ViewBlock
 @property (nonatomic, copy) DrawRectBlock drawRectBlock;
-// 速度
-@property (nonatomic, assign) CGFloat speed;
 
 
 /**

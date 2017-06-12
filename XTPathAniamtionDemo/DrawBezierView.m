@@ -13,8 +13,6 @@ static const NSInteger pointRadius = 3.0;
 
 
 @interface DrawBezierView ()
-
-
 // 上下文
 @property (nonatomic, assign) CGContextRef currentContext;
 // 手动加的点的集合
