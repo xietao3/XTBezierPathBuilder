@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,8 +20,51 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Gj-JE-CBQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="40"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="2" maximumValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-eL-dIB">
+                                        <rect key="frame" x="10" y="5" width="94" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="94" id="cF7-vz-sGw"/>
+                                            <constraint firstAttribute="height" constant="29" id="qGX-Aa-3zu"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="stepperValueChangedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="jAp-Hd-Zjb"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2阶" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5mW-rc-h6v">
+                                        <rect key="frame" x="114" y="9" width="40" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="24z-cH-8IZ"/>
+                                            <constraint firstAttribute="width" constant="40" id="beW-ER-3H1"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5mW-rc-h6v" firstAttribute="leading" secondItem="bSq-eL-dIB" secondAttribute="trailing" constant="10" id="ABf-fz-RIw"/>
+                                    <constraint firstAttribute="height" constant="40" id="Feg-7U-IIS"/>
+                                    <constraint firstItem="bSq-eL-dIB" firstAttribute="top" secondItem="3Gj-JE-CBQ" secondAttribute="top" constant="5" id="TGG-Ii-40R"/>
+                                    <constraint firstItem="5mW-rc-h6v" firstAttribute="centerY" secondItem="bSq-eL-dIB" secondAttribute="centerY" id="qFq-7l-0gH"/>
+                                    <constraint firstItem="bSq-eL-dIB" firstAttribute="leading" secondItem="3Gj-JE-CBQ" secondAttribute="leading" constant="10" id="zPm-Ru-JNH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="3Gj-JE-CBQ" secondAttribute="trailing" id="81q-EG-k4b"/>
+                            <constraint firstItem="3Gj-JE-CBQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="B7c-bl-kqM"/>
+                            <constraint firstItem="3Gj-JE-CBQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Vdk-Cs-R1b"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bezierLevelLabel" destination="5mW-rc-h6v" id="LlR-pR-wgc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

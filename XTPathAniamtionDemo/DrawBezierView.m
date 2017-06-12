@@ -13,7 +13,6 @@ static const NSInteger pointRadius = 3.0;
 
 @interface DrawBezierView ()
 
-@property (weak, nonatomic) IBOutlet UILabel *bezierLevelLabel;
 
 // 上下文
 @property (nonatomic, assign) CGContextRef currentContext;
@@ -21,8 +20,6 @@ static const NSInteger pointRadius = 3.0;
 @property (nonatomic, strong) CADisplayLink *displayLink;
 // 手动加的点的集合
 @property (nonatomic, strong) NSMutableArray *touchPoints;
-// 速度
-@property (nonatomic, assign) CGFloat speed;
 // 进度
 @property (nonatomic, assign) CGFloat progress;
 // 限制手动加点的数量 控制贝塞尔曲线阶数
@@ -62,13 +59,14 @@ static const NSInteger pointRadius = 3.0;
     _speed = 0.01;
     _pointLimitNumber = 3;
     _colors = @[[UIColor redColor],[UIColor orangeColor],[UIColor yellowColor],[UIColor greenColor],[UIColor cyanColor],[UIColor blueColor],[UIColor purpleColor],[UIColor darkGrayColor],[UIColor brownColor]];
+    
+    _colors = @[[UIColor darkGrayColor],[UIColor brownColor],[UIColor purpleColor],[UIColor blueColor],[UIColor cyanColor],[UIColor greenColor],[UIColor yellowColor],[UIColor orangeColor],[UIColor redColor]];
 }
 
 
 - (void)drawRect:(CGRect)rect {
     _currentContext = UIGraphicsGetCurrentContext();
     
-    __weak typeof(self) weakSelf = self;
     
     // touchPoint & touchLine
     [self drawPointAndLineWithPoints:_touchPoints lineColor:nil needDrawPoint:YES pointColor:nil];
@@ -78,14 +76,17 @@ static const NSInteger pointRadius = 3.0;
         // 取不同颜色
         NSInteger colorIndex = MIN([_subLevelPoints indexOfObject:levelPoints], _colors.count-1);
         // 画各级点和线
-        [weakSelf drawPointAndLineWithPoints:levelPoints lineColor:_colors[colorIndex] needDrawPoint:YES pointColor:_colors[colorIndex]];
+        [self drawPointAndLineWithPoints:levelPoints lineColor:_colors[colorIndex] needDrawPoint:YES pointColor:_colors[colorIndex]];
 
     }
     
     // bezierLine
     // 画最终的贝塞尔曲线
-    [weakSelf drawPointAndLineWithPoints:weakSelf.bezierPathPoints lineColor:[UIColor redColor] needDrawPoint:NO pointColor:nil];
-
+    [self drawPointAndLineWithPoints:self.bezierPathPoints lineColor:[UIColor redColor] needDrawPoint:NO pointColor:nil];
+    if (_progress < 1.0) {
+        NSValue *pointValue = [self.bezierPathPoints lastObject];
+        if (pointValue) [self drawPoint:pointValue.CGPointValue pointColor:[UIColor redColor]];
+    }
     
 }
 
@@ -162,20 +163,18 @@ static const NSInteger pointRadius = 3.0;
 
 }
 
-#pragma mark - IBAction
-- (IBAction)stepperValueChangedAction:(id)sender {
-    UIStepper *stepper = sender;
-    _pointLimitNumber = stepper.value;
-    _bezierLevelLabel.text = [NSString stringWithFormat:@"%ld阶",_pointLimitNumber-1];
-    
+
+#pragma mark - PublicMethod
+- (void)updatePointNumber:(NSInteger)pointNumber {
+    _pointLimitNumber = pointNumber;
     // 清理掉当前屏幕内容
     _displayLink.paused = YES;
     [_touchPoints removeAllObjects];
     [_subLevelPoints removeAllObjects];
     [_bezierPathPoints removeAllObjects];
     [self setNeedsDisplay];
-}
 
+}
 
 
 #pragma mark - PrivateMethod

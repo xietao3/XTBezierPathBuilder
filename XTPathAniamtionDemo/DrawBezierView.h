@@ -10,4 +10,9 @@
 
 @interface DrawBezierView : UIView
 
+// 速度
+@property (nonatomic, assign) CGFloat speed;
+
+
+- (void)updatePointNumber:(NSInteger)pointNumber;
 @end
