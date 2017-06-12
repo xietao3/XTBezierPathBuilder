@@ -42,6 +42,10 @@
 }
 
 
+- (IBAction)sliderValueChanged:(id)sender {
+    UISlider *stepper = sender;
+    [_bezierView setBezierProgress:stepper.value];
+}
 
 
 

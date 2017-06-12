@@ -44,11 +44,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hLN-lu-kCX">
+                                        <rect key="frame" x="162" y="5" width="205" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="b8K-EF-r2G"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xsw-zP-2Oj"/>
+                                        </connections>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="5mW-rc-h6v" firstAttribute="leading" secondItem="bSq-eL-dIB" secondAttribute="trailing" constant="10" id="ABf-fz-RIw"/>
                                     <constraint firstAttribute="height" constant="40" id="Feg-7U-IIS"/>
+                                    <constraint firstAttribute="trailing" secondItem="hLN-lu-kCX" secondAttribute="trailing" constant="10" id="LEk-Ct-dO3"/>
+                                    <constraint firstItem="hLN-lu-kCX" firstAttribute="centerY" secondItem="3Gj-JE-CBQ" secondAttribute="centerY" id="Net-c2-O1F"/>
+                                    <constraint firstItem="hLN-lu-kCX" firstAttribute="leading" secondItem="5mW-rc-h6v" secondAttribute="trailing" constant="10" id="PES-Sz-9da"/>
                                     <constraint firstItem="bSq-eL-dIB" firstAttribute="top" secondItem="3Gj-JE-CBQ" secondAttribute="top" constant="5" id="TGG-Ii-40R"/>
                                     <constraint firstItem="5mW-rc-h6v" firstAttribute="centerY" secondItem="bSq-eL-dIB" secondAttribute="centerY" id="qFq-7l-0gH"/>
                                     <constraint firstItem="bSq-eL-dIB" firstAttribute="leading" secondItem="3Gj-JE-CBQ" secondAttribute="leading" constant="10" id="zPm-Ru-JNH"/>

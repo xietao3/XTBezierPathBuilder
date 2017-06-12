@@ -7,6 +7,7 @@
 //
 
 #import "DrawBezierView.h"
+#import "DrawBezierManager.h"
 
 static const NSInteger pointRadius = 3.0;
 
@@ -16,20 +17,21 @@ static const NSInteger pointRadius = 3.0;
 
 // 上下文
 @property (nonatomic, assign) CGContextRef currentContext;
-// 发动机
-@property (nonatomic, strong) CADisplayLink *displayLink;
 // 手动加的点的集合
 @property (nonatomic, strong) NSMutableArray *touchPoints;
-// 进度
-@property (nonatomic, assign) CGFloat progress;
 // 限制手动加点的数量 控制贝塞尔曲线阶数
 @property (nonatomic, assign) NSInteger pointLimitNumber;
 // 颜色集合
 @property (nonatomic, strong) NSArray *colors;
+
+@property (nonatomic, strong) DrawBezierManager *drawBezierManager;
+
+
+#pragma mark - temp
 // 最终贝塞尔曲线的点的集合
-@property (nonatomic, strong) NSMutableArray *bezierPathPoints;
+@property (nonatomic, weak) NSArray *bezierPathPoints;
 // 中间阶层的点的集合 二阶数组
-@property (nonatomic, strong) NSMutableArray *subLevelPoints;
+@property (nonatomic, weak) NSArray *subLevelPoints;
 
 
 @end
@@ -48,22 +50,35 @@ static const NSInteger pointRadius = 3.0;
 }
 
 - (void)initial {
-    _touchPoints = [[NSMutableArray alloc] init];
-    _bezierPathPoints = [[NSMutableArray alloc] init];
-    
-    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateDisplayLink)];
-    [self.displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
-    self.displayLink.paused = YES;
+    __weak typeof(self) weakSelf = self;
 
-    _progress = 0;
-    _speed = 0.01;
+    _touchPoints = [[NSMutableArray alloc] init];
+
     _pointLimitNumber = 3;
-    _colors = @[[UIColor redColor],[UIColor orangeColor],[UIColor yellowColor],[UIColor greenColor],[UIColor cyanColor],[UIColor blueColor],[UIColor purpleColor],[UIColor darkGrayColor],[UIColor brownColor]];
     
     _colors = @[[UIColor darkGrayColor],[UIColor brownColor],[UIColor purpleColor],[UIColor blueColor],[UIColor cyanColor],[UIColor greenColor],[UIColor yellowColor],[UIColor orangeColor],[UIColor redColor]];
+
+    _drawBezierManager = [[DrawBezierManager alloc] init];
+    _drawBezierManager.drawRectBlock = ^(NSArray *subLevelPoints,NSArray *bezierPathPoints){
+        weakSelf.subLevelPoints = subLevelPoints;
+        weakSelf.bezierPathPoints = bezierPathPoints;
+        [weakSelf setNeedsDisplay];
+    };
 }
 
+#pragma mark - PublicMethod
+- (void)updatePointNumber:(NSInteger)pointNumber {
+    _pointLimitNumber = pointNumber;
+    // 清理掉当前屏幕内容
+    [_touchPoints removeAllObjects];
+    [_drawBezierManager cleanDataAndReloadView];
+}
 
+- (void)setBezierProgress:(CGFloat)progress {
+    [_drawBezierManager setBezierProgress:progress];
+}
+
+#pragma mark - DrawMethod
 - (void)drawRect:(CGRect)rect {
     _currentContext = UIGraphicsGetCurrentContext();
     
@@ -73,24 +88,23 @@ static const NSInteger pointRadius = 3.0;
     
     // subLevelLine
     for (NSArray *levelPoints in _subLevelPoints) {
-        // 取不同颜色
-        NSInteger colorIndex = MIN([_subLevelPoints indexOfObject:levelPoints], _colors.count-1);
-        // 画各级点和线
-        [self drawPointAndLineWithPoints:levelPoints lineColor:_colors[colorIndex] needDrawPoint:YES pointColor:_colors[colorIndex]];
-
+        if (levelPoints.count > 1) {
+            // 取不同颜色
+            NSInteger colorIndex = MIN([_subLevelPoints indexOfObject:levelPoints], _colors.count-1);
+            // 画各级点和线
+            [self drawPointAndLineWithPoints:levelPoints lineColor:_colors[colorIndex] needDrawPoint:YES pointColor:_colors[colorIndex]];
+        }else{
+            // 画最终的贝塞尔曲线的点
+            NSValue *pointValue = [levelPoints lastObject];
+            if (pointValue) [self drawPoint:pointValue.CGPointValue pointColor:[UIColor redColor]];
+        }
     }
-    
     // bezierLine
     // 画最终的贝塞尔曲线
     [self drawPointAndLineWithPoints:self.bezierPathPoints lineColor:[UIColor redColor] needDrawPoint:NO pointColor:nil];
-    if (_progress < 1.0) {
-        NSValue *pointValue = [self.bezierPathPoints lastObject];
-        if (pointValue) [self drawPoint:pointValue.CGPointValue pointColor:[UIColor redColor]];
-    }
     
 }
 
-#pragma mark - DrawMethod
 - (void)drawPoint:(CGPoint)point {
     [self drawPoint:point pointColor:[UIColor lightGrayColor]];
 }
@@ -164,112 +178,19 @@ static const NSInteger pointRadius = 3.0;
 }
 
 
-#pragma mark - PublicMethod
-- (void)updatePointNumber:(NSInteger)pointNumber {
-    _pointLimitNumber = pointNumber;
-    // 清理掉当前屏幕内容
-    _displayLink.paused = YES;
-    [_touchPoints removeAllObjects];
-    [_subLevelPoints removeAllObjects];
-    [_bezierPathPoints removeAllObjects];
-    [self setNeedsDisplay];
-
-}
-
-
 #pragma mark - PrivateMethod
 - (void)checkBezierPointCount {
     if (_touchPoints.count >= _pointLimitNumber) {
+        // 清理掉当前屏幕内容
         [_touchPoints removeAllObjects];
-        [_bezierPathPoints removeAllObjects];
+        [_drawBezierManager cleanDataAndReloadView];
     }
 }
-
-- (void)updateDisplayLink {
-    [self checkDisplayLineStop];
-    
-    _subLevelPoints = [self getAllPointsWithOriginPoints:_touchPoints progress:_progress];
-    [self setNeedsDisplay];
-    _progress+=_speed;
-    
-}
-
-- (void)checkDisplayLineStop {
-    if (_progress > 1.0) {
-        // 结束后 强行归1
-        self.displayLink.paused = YES;
-        _progress = 1.0;
-        [self updateDisplayLink];
-        
-        // 删除部分阶级的线
-        _progress = 1.0;
-        __weak typeof(self) weakSelf = self;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [weakSelf.subLevelPoints removeAllObjects];
-            [weakSelf setNeedsDisplay];
-        });
-        return;
-    }
-}
-
-
-/**
- 获取根据touch点衍生出来所有的点
-
- @param points 手动点击的点
- @param progress 贝塞尔曲线当前进度
- @return pointArray
- */
-- (NSMutableArray *)getAllPointsWithOriginPoints:(NSArray *)points progress:(CGFloat)progress{
-    NSMutableArray *resultArray = [[NSMutableArray alloc] init];
-    NSInteger level = points.count;
-    
-    NSArray *tempArray = points;
-    for (int i = 0; i < level; i++) {
-        tempArray = [self getsubLevelPointsWithSuperPoints:tempArray progress:progress];
-        if (tempArray.count > 1) {
-            // 中间阶级的点
-            [resultArray addObject:tempArray];
-        }else{
-            // 最终贝塞尔曲线的点
-            [_bezierPathPoints addObjectsFromArray:tempArray];
-            break;
-
-        }
-    }
-    return resultArray;
-}
-
-
-/**
- 根据上一级的点获取下一级的点
-
- @param points points
- @param progress progress
- @return array
- */
-- (NSArray *)getsubLevelPointsWithSuperPoints:(NSArray *)points progress:(CGFloat)progress{
-    NSMutableArray *tempArr = [[NSMutableArray alloc] init];
-    for (int i = 0; i < points.count-1; i++) {
-        NSValue *preValue = [points objectAtIndex:i];
-        CGPoint prePoint = preValue.CGPointValue;
-        
-        NSValue *lastValue = [points objectAtIndex:i+1];
-        CGPoint lastPoint = lastValue.CGPointValue;
-        CGFloat diffX = lastPoint.x-prePoint.x;
-        CGFloat diffY = lastPoint.y-prePoint.y;
-        
-        CGPoint currentPoint = CGPointMake(prePoint.x+diffX*progress, prePoint.y+diffY*progress);
-        [tempArr addObject:[NSValue valueWithCGPoint:currentPoint]];
-    }
-    return tempArr;
-}
-
-
 
 #pragma mark - TouchMethod
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event {
-    if (!self.displayLink.paused) return;
+    // 绘画过程中停止新增点
+    if (![_drawBezierManager drawDisplayLinkPaused]) return;
     [self checkBezierPointCount];
     
     UITouch *touch = [touches anyObject];
@@ -279,8 +200,7 @@ static const NSInteger pointRadius = 3.0;
     [self setNeedsDisplay];
 
     if (_touchPoints.count == _pointLimitNumber) {
-        _progress = 0;
-        self.displayLink.paused = NO;
+        [_drawBezierManager startDrawDisplayLinkWithTouchPoints:_touchPoints];
     }
     
 }

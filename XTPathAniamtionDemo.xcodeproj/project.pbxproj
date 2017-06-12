@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93B27C821EEE3F4800794399 /* DrawBezierManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B27C811EEE3F4800794399 /* DrawBezierManager.m */; };
 		93B871B01EE6AC87009BBD34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871AF1EE6AC87009BBD34 /* main.m */; };
 		93B871B31EE6AC87009BBD34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871B21EE6AC87009BBD34 /* AppDelegate.m */; };
 		93B871B61EE6AC87009BBD34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871B51EE6AC87009BBD34 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93B27C801EEE3F4800794399 /* DrawBezierManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierManager.h; sourceTree = "<group>"; };
+		93B27C811EEE3F4800794399 /* DrawBezierManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierManager.m; sourceTree = "<group>"; };
 		93B871AB1EE6AC87009BBD34 /* XTPathAniamtionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTPathAniamtionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B871AF1EE6AC87009BBD34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93B871B11EE6AC87009BBD34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 				93F168D61EEC1C80008D29E2 /* DrawBezierView.h */,
 				93F168D71EEC1C80008D29E2 /* DrawBezierView.m */,
 				93F168D91EEC54A5008D29E2 /* DrawBezierView.xib */,
+				93B27C801EEE3F4800794399 /* DrawBezierManager.h */,
+				93B27C811EEE3F4800794399 /* DrawBezierManager.m */,
 				93B871B71EE6AC87009BBD34 /* Main.storyboard */,
 				93B871BA1EE6AC87009BBD34 /* Assets.xcassets */,
 				93B871BC1EE6AC87009BBD34 /* LaunchScreen.storyboard */,
@@ -284,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93B871B61EE6AC87009BBD34 /* ViewController.m in Sources */,
+				93B27C821EEE3F4800794399 /* DrawBezierManager.m in Sources */,
 				93F168D81EEC1C80008D29E2 /* DrawBezierView.m in Sources */,
 				93B871B31EE6AC87009BBD34 /* AppDelegate.m in Sources */,
 				93B871B01EE6AC87009BBD34 /* main.m in Sources */,
