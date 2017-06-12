@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "93B871AA1EE6AC87009BBD34"
-               BuildableName = "XTPathAniamtionDemo.app"
-               BlueprintName = "XTPathAniamtionDemo"
-               ReferencedContainer = "container:XTPathAniamtionDemo.xcodeproj">
+               BuildableName = "XTBezierPathBuilderDemo.app"
+               BlueprintName = "XTBezierPathBuilderDemo"
+               ReferencedContainer = "container:XTBezierPathBuilderDemo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "93B871C31EE6AC87009BBD34"
-               BuildableName = "XTPathAniamtionDemoTests.xctest"
-               BlueprintName = "XTPathAniamtionDemoTests"
-               ReferencedContainer = "container:XTPathAniamtionDemo.xcodeproj">
+               BuildableName = "XTBezierPathBuilderDemoTests.xctest"
+               BlueprintName = "XTBezierPathBuilderDemoTests"
+               ReferencedContainer = "container:XTBezierPathBuilderDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "93B871CE1EE6AC87009BBD34"
-               BuildableName = "XTPathAniamtionDemoUITests.xctest"
-               BlueprintName = "XTPathAniamtionDemoUITests"
-               ReferencedContainer = "container:XTPathAniamtionDemo.xcodeproj">
+               BuildableName = "XTBezierPathBuilderDemoUITests.xctest"
+               BlueprintName = "XTBezierPathBuilderDemoUITests"
+               ReferencedContainer = "container:XTBezierPathBuilderDemo.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93B871AA1EE6AC87009BBD34"
-            BuildableName = "XTPathAniamtionDemo.app"
-            BlueprintName = "XTPathAniamtionDemo"
-            ReferencedContainer = "container:XTPathAniamtionDemo.xcodeproj">
+            BuildableName = "XTBezierPathBuilderDemo.app"
+            BlueprintName = "XTBezierPathBuilderDemo"
+            ReferencedContainer = "container:XTBezierPathBuilderDemo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93B871AA1EE6AC87009BBD34"
-            BuildableName = "XTPathAniamtionDemo.app"
-            BlueprintName = "XTPathAniamtionDemo"
-            ReferencedContainer = "container:XTPathAniamtionDemo.xcodeproj">
+            BuildableName = "XTBezierPathBuilderDemo.app"
+            BlueprintName = "XTBezierPathBuilderDemo"
+            ReferencedContainer = "container:XTBezierPathBuilderDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "93B871AA1EE6AC87009BBD34"
-            BuildableName = "XTPathAniamtionDemo.app"
-            BlueprintName = "XTPathAniamtionDemo"
-            ReferencedContainer = "container:XTPathAniamtionDemo.xcodeproj">
+            BuildableName = "XTBezierPathBuilderDemo.app"
+            BlueprintName = "XTBezierPathBuilderDemo"
+            ReferencedContainer = "container:XTBezierPathBuilderDemo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

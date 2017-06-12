@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93B27C821EEE3F4800794399 /* DrawBezierManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B27C811EEE3F4800794399 /* DrawBezierManager.m */; };
-		93B871B01EE6AC87009BBD34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871AF1EE6AC87009BBD34 /* main.m */; };
-		93B871B31EE6AC87009BBD34 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871B21EE6AC87009BBD34 /* AppDelegate.m */; };
-		93B871B61EE6AC87009BBD34 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871B51EE6AC87009BBD34 /* ViewController.m */; };
-		93B871B91EE6AC87009BBD34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B871B71EE6AC87009BBD34 /* Main.storyboard */; };
-		93B871BB1EE6AC87009BBD34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93B871BA1EE6AC87009BBD34 /* Assets.xcassets */; };
-		93B871BE1EE6AC87009BBD34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93B871BC1EE6AC87009BBD34 /* LaunchScreen.storyboard */; };
+		93592A751EEE8B5B0052FCD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93592A661EEE8B5B0052FCD0 /* AppDelegate.m */; };
+		93592A761EEE8B5B0052FCD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93592A671EEE8B5B0052FCD0 /* Assets.xcassets */; };
+		93592A771EEE8B5B0052FCD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93592A681EEE8B5B0052FCD0 /* LaunchScreen.storyboard */; };
+		93592A781EEE8B5B0052FCD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93592A6A1EEE8B5B0052FCD0 /* Main.storyboard */; };
+		93592A791EEE8B5B0052FCD0 /* DrawBezierManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93592A6D1EEE8B5B0052FCD0 /* DrawBezierManager.m */; };
+		93592A7A1EEE8B5B0052FCD0 /* DrawBezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93592A6F1EEE8B5B0052FCD0 /* DrawBezierView.m */; };
+		93592A7B1EEE8B5B0052FCD0 /* DrawBezierView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93592A701EEE8B5B0052FCD0 /* DrawBezierView.xib */; };
+		93592A7C1EEE8B5B0052FCD0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93592A711EEE8B5B0052FCD0 /* Info.plist */; };
+		93592A7D1EEE8B5B0052FCD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93592A721EEE8B5B0052FCD0 /* main.m */; };
+		93592A7E1EEE8B5B0052FCD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93592A741EEE8B5B0052FCD0 /* ViewController.m */; };
 		93B871C91EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871C81EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m */; };
 		93B871D41EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871D31EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m */; };
-		93F168D81EEC1C80008D29E2 /* DrawBezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93F168D71EEC1C80008D29E2 /* DrawBezierView.m */; };
-		93F168DA1EEC54A5008D29E2 /* DrawBezierView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93F168D91EEC54A5008D29E2 /* DrawBezierView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,27 +39,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93B27C801EEE3F4800794399 /* DrawBezierManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierManager.h; sourceTree = "<group>"; };
-		93B27C811EEE3F4800794399 /* DrawBezierManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierManager.m; sourceTree = "<group>"; };
-		93B871AB1EE6AC87009BBD34 /* XTPathAniamtionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTPathAniamtionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		93B871AF1EE6AC87009BBD34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		93B871B11EE6AC87009BBD34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		93B871B21EE6AC87009BBD34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		93B871B41EE6AC87009BBD34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		93B871B51EE6AC87009BBD34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		93B871B81EE6AC87009BBD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		93B871BA1EE6AC87009BBD34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		93B871BD1EE6AC87009BBD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		93B871BF1EE6AC87009BBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93B871C41EE6AC87009BBD34 /* XTPathAniamtionDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTPathAniamtionDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93592A651EEE8B5B0052FCD0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		93592A661EEE8B5B0052FCD0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		93592A671EEE8B5B0052FCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93592A691EEE8B5B0052FCD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93592A6B1EEE8B5B0052FCD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		93592A6C1EEE8B5B0052FCD0 /* DrawBezierManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierManager.h; sourceTree = "<group>"; };
+		93592A6D1EEE8B5B0052FCD0 /* DrawBezierManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierManager.m; sourceTree = "<group>"; };
+		93592A6E1EEE8B5B0052FCD0 /* DrawBezierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierView.h; sourceTree = "<group>"; };
+		93592A6F1EEE8B5B0052FCD0 /* DrawBezierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierView.m; sourceTree = "<group>"; };
+		93592A701EEE8B5B0052FCD0 /* DrawBezierView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawBezierView.xib; sourceTree = "<group>"; };
+		93592A711EEE8B5B0052FCD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93592A721EEE8B5B0052FCD0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93592A731EEE8B5B0052FCD0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		93592A741EEE8B5B0052FCD0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		93B871AB1EE6AC87009BBD34 /* XTBezierPathBuilderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTBezierPathBuilderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B871C41EE6AC87009BBD34 /* XTBezierPathBuilderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTBezierPathBuilderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B871C81EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTPathAniamtionDemoTests.m; sourceTree = "<group>"; };
 		93B871CA1EE6AC87009BBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93B871CF1EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTPathAniamtionDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93B871CF1EE6AC87009BBD34 /* XTBezierPathBuilderDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTBezierPathBuilderDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B871D31EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTPathAniamtionDemoUITests.m; sourceTree = "<group>"; };
 		93B871D51EE6AC87009BBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93F168D61EEC1C80008D29E2 /* DrawBezierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierView.h; sourceTree = "<group>"; };
-		93F168D71EEC1C80008D29E2 /* DrawBezierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierView.m; sourceTree = "<group>"; };
-		93F168D91EEC54A5008D29E2 /* DrawBezierView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawBezierView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +87,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93592A641EEE8B5B0052FCD0 /* XTBezierPathBuilderDemo */ = {
+			isa = PBXGroup;
+			children = (
+				93592A651EEE8B5B0052FCD0 /* AppDelegate.h */,
+				93592A661EEE8B5B0052FCD0 /* AppDelegate.m */,
+				93592A671EEE8B5B0052FCD0 /* Assets.xcassets */,
+				93592A681EEE8B5B0052FCD0 /* LaunchScreen.storyboard */,
+				93592A6A1EEE8B5B0052FCD0 /* Main.storyboard */,
+				93592A6C1EEE8B5B0052FCD0 /* DrawBezierManager.h */,
+				93592A6D1EEE8B5B0052FCD0 /* DrawBezierManager.m */,
+				93592A6E1EEE8B5B0052FCD0 /* DrawBezierView.h */,
+				93592A6F1EEE8B5B0052FCD0 /* DrawBezierView.m */,
+				93592A701EEE8B5B0052FCD0 /* DrawBezierView.xib */,
+				93592A711EEE8B5B0052FCD0 /* Info.plist */,
+				93592A721EEE8B5B0052FCD0 /* main.m */,
+				93592A731EEE8B5B0052FCD0 /* ViewController.h */,
+				93592A741EEE8B5B0052FCD0 /* ViewController.m */,
+			);
+			name = XTBezierPathBuilderDemo;
+			path = XTPathAniamtionDemo;
+			sourceTree = "<group>";
+		};
 		93B871A21EE6AC87009BBD34 = {
 			isa = PBXGroup;
 			children = (
-				93B871AD1EE6AC87009BBD34 /* XTPathAniamtionDemo */,
+				93592A641EEE8B5B0052FCD0 /* XTBezierPathBuilderDemo */,
 				93B871C71EE6AC87009BBD34 /* XTPathAniamtionDemoTests */,
 				93B871D21EE6AC87009BBD34 /* XTPathAniamtionDemoUITests */,
 				93B871AC1EE6AC87009BBD34 /* Products */,
@@ -99,40 +122,11 @@
 		93B871AC1EE6AC87009BBD34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				93B871AB1EE6AC87009BBD34 /* XTPathAniamtionDemo.app */,
-				93B871C41EE6AC87009BBD34 /* XTPathAniamtionDemoTests.xctest */,
-				93B871CF1EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.xctest */,
+				93B871AB1EE6AC87009BBD34 /* XTBezierPathBuilderDemo.app */,
+				93B871C41EE6AC87009BBD34 /* XTBezierPathBuilderDemoTests.xctest */,
+				93B871CF1EE6AC87009BBD34 /* XTBezierPathBuilderDemoUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		93B871AD1EE6AC87009BBD34 /* XTPathAniamtionDemo */ = {
-			isa = PBXGroup;
-			children = (
-				93B871B11EE6AC87009BBD34 /* AppDelegate.h */,
-				93B871B21EE6AC87009BBD34 /* AppDelegate.m */,
-				93B871B41EE6AC87009BBD34 /* ViewController.h */,
-				93B871B51EE6AC87009BBD34 /* ViewController.m */,
-				93F168D61EEC1C80008D29E2 /* DrawBezierView.h */,
-				93F168D71EEC1C80008D29E2 /* DrawBezierView.m */,
-				93F168D91EEC54A5008D29E2 /* DrawBezierView.xib */,
-				93B27C801EEE3F4800794399 /* DrawBezierManager.h */,
-				93B27C811EEE3F4800794399 /* DrawBezierManager.m */,
-				93B871B71EE6AC87009BBD34 /* Main.storyboard */,
-				93B871BA1EE6AC87009BBD34 /* Assets.xcassets */,
-				93B871BC1EE6AC87009BBD34 /* LaunchScreen.storyboard */,
-				93B871BF1EE6AC87009BBD34 /* Info.plist */,
-				93B871AE1EE6AC87009BBD34 /* Supporting Files */,
-			);
-			path = XTPathAniamtionDemo;
-			sourceTree = "<group>";
-		};
-		93B871AE1EE6AC87009BBD34 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				93B871AF1EE6AC87009BBD34 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		93B871C71EE6AC87009BBD34 /* XTPathAniamtionDemoTests */ = {
@@ -156,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		93B871AA1EE6AC87009BBD34 /* XTPathAniamtionDemo */ = {
+		93B871AA1EE6AC87009BBD34 /* XTBezierPathBuilderDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93B871D81EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTPathAniamtionDemo" */;
+			buildConfigurationList = 93B871D81EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTBezierPathBuilderDemo" */;
 			buildPhases = (
 				93B871A71EE6AC87009BBD34 /* Sources */,
 				93B871A81EE6AC87009BBD34 /* Frameworks */,
@@ -168,14 +162,14 @@
 			);
 			dependencies = (
 			);
-			name = XTPathAniamtionDemo;
+			name = XTBezierPathBuilderDemo;
 			productName = XTPathAniamtionDemo;
-			productReference = 93B871AB1EE6AC87009BBD34 /* XTPathAniamtionDemo.app */;
+			productReference = 93B871AB1EE6AC87009BBD34 /* XTBezierPathBuilderDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		93B871C31EE6AC87009BBD34 /* XTPathAniamtionDemoTests */ = {
+		93B871C31EE6AC87009BBD34 /* XTBezierPathBuilderDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93B871DB1EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTPathAniamtionDemoTests" */;
+			buildConfigurationList = 93B871DB1EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTBezierPathBuilderDemoTests" */;
 			buildPhases = (
 				93B871C01EE6AC87009BBD34 /* Sources */,
 				93B871C11EE6AC87009BBD34 /* Frameworks */,
@@ -186,14 +180,14 @@
 			dependencies = (
 				93B871C61EE6AC87009BBD34 /* PBXTargetDependency */,
 			);
-			name = XTPathAniamtionDemoTests;
+			name = XTBezierPathBuilderDemoTests;
 			productName = XTPathAniamtionDemoTests;
-			productReference = 93B871C41EE6AC87009BBD34 /* XTPathAniamtionDemoTests.xctest */;
+			productReference = 93B871C41EE6AC87009BBD34 /* XTBezierPathBuilderDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		93B871CE1EE6AC87009BBD34 /* XTPathAniamtionDemoUITests */ = {
+		93B871CE1EE6AC87009BBD34 /* XTBezierPathBuilderDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93B871DE1EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTPathAniamtionDemoUITests" */;
+			buildConfigurationList = 93B871DE1EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTBezierPathBuilderDemoUITests" */;
 			buildPhases = (
 				93B871CB1EE6AC87009BBD34 /* Sources */,
 				93B871CC1EE6AC87009BBD34 /* Frameworks */,
@@ -204,9 +198,9 @@
 			dependencies = (
 				93B871D11EE6AC87009BBD34 /* PBXTargetDependency */,
 			);
-			name = XTPathAniamtionDemoUITests;
+			name = XTBezierPathBuilderDemoUITests;
 			productName = XTPathAniamtionDemoUITests;
-			productReference = 93B871CF1EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.xctest */;
+			productReference = 93B871CF1EE6AC87009BBD34 /* XTBezierPathBuilderDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -235,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 93B871A61EE6AC87009BBD34 /* Build configuration list for PBXProject "XTPathAniamtionDemo" */;
+			buildConfigurationList = 93B871A61EE6AC87009BBD34 /* Build configuration list for PBXProject "XTBezierPathBuilderDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -248,9 +242,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				93B871AA1EE6AC87009BBD34 /* XTPathAniamtionDemo */,
-				93B871C31EE6AC87009BBD34 /* XTPathAniamtionDemoTests */,
-				93B871CE1EE6AC87009BBD34 /* XTPathAniamtionDemoUITests */,
+				93B871AA1EE6AC87009BBD34 /* XTBezierPathBuilderDemo */,
+				93B871C31EE6AC87009BBD34 /* XTBezierPathBuilderDemoTests */,
+				93B871CE1EE6AC87009BBD34 /* XTBezierPathBuilderDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -260,10 +254,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93B871BE1EE6AC87009BBD34 /* LaunchScreen.storyboard in Resources */,
-				93F168DA1EEC54A5008D29E2 /* DrawBezierView.xib in Resources */,
-				93B871BB1EE6AC87009BBD34 /* Assets.xcassets in Resources */,
-				93B871B91EE6AC87009BBD34 /* Main.storyboard in Resources */,
+				93592A781EEE8B5B0052FCD0 /* Main.storyboard in Resources */,
+				93592A771EEE8B5B0052FCD0 /* LaunchScreen.storyboard in Resources */,
+				93592A761EEE8B5B0052FCD0 /* Assets.xcassets in Resources */,
+				93592A7C1EEE8B5B0052FCD0 /* Info.plist in Resources */,
+				93592A7B1EEE8B5B0052FCD0 /* DrawBezierView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,11 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				93B871B61EE6AC87009BBD34 /* ViewController.m in Sources */,
-				93B27C821EEE3F4800794399 /* DrawBezierManager.m in Sources */,
-				93F168D81EEC1C80008D29E2 /* DrawBezierView.m in Sources */,
-				93B871B31EE6AC87009BBD34 /* AppDelegate.m in Sources */,
-				93B871B01EE6AC87009BBD34 /* main.m in Sources */,
+				93592A751EEE8B5B0052FCD0 /* AppDelegate.m in Sources */,
+				93592A7E1EEE8B5B0052FCD0 /* ViewController.m in Sources */,
+				93592A7A1EEE8B5B0052FCD0 /* DrawBezierView.m in Sources */,
+				93592A791EEE8B5B0052FCD0 /* DrawBezierManager.m in Sources */,
+				93592A7D1EEE8B5B0052FCD0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,31 +312,31 @@
 /* Begin PBXTargetDependency section */
 		93B871C61EE6AC87009BBD34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 93B871AA1EE6AC87009BBD34 /* XTPathAniamtionDemo */;
+			target = 93B871AA1EE6AC87009BBD34 /* XTBezierPathBuilderDemo */;
 			targetProxy = 93B871C51EE6AC87009BBD34 /* PBXContainerItemProxy */;
 		};
 		93B871D11EE6AC87009BBD34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 93B871AA1EE6AC87009BBD34 /* XTPathAniamtionDemo */;
+			target = 93B871AA1EE6AC87009BBD34 /* XTBezierPathBuilderDemo */;
 			targetProxy = 93B871D01EE6AC87009BBD34 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		93B871B71EE6AC87009BBD34 /* Main.storyboard */ = {
+		93592A681EEE8B5B0052FCD0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				93B871B81EE6AC87009BBD34 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		93B871BC1EE6AC87009BBD34 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				93B871BD1EE6AC87009BBD34 /* Base */,
+				93592A691EEE8B5B0052FCD0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		93592A6A1EEE8B5B0052FCD0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93592A6B1EEE8B5B0052FCD0 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -467,7 +462,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xietao3.XTPathAniamtionDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XTPathAniamtionDemo.app/XTPathAniamtionDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XTBezierPathBuilderDemo.app/XTBezierPathBuilderDemo";
 			};
 			name = Debug;
 		};
@@ -479,7 +474,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xietao3.XTPathAniamtionDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XTPathAniamtionDemo.app/XTPathAniamtionDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XTBezierPathBuilderDemo.app/XTBezierPathBuilderDemo";
 			};
 			name = Release;
 		};
@@ -508,7 +503,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		93B871A61EE6AC87009BBD34 /* Build configuration list for PBXProject "XTPathAniamtionDemo" */ = {
+		93B871A61EE6AC87009BBD34 /* Build configuration list for PBXProject "XTBezierPathBuilderDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93B871D61EE6AC87009BBD34 /* Debug */,
@@ -517,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93B871D81EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTPathAniamtionDemo" */ = {
+		93B871D81EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTBezierPathBuilderDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93B871D91EE6AC87009BBD34 /* Debug */,
@@ -526,7 +521,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93B871DB1EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTPathAniamtionDemoTests" */ = {
+		93B871DB1EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTBezierPathBuilderDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93B871DC1EE6AC87009BBD34 /* Debug */,
@@ -535,7 +530,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93B871DE1EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTPathAniamtionDemoUITests" */ = {
+		93B871DE1EE6AC87009BBD34 /* Build configuration list for PBXNativeTarget "XTBezierPathBuilderDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				93B871DF1EE6AC87009BBD34 /* Debug */,
