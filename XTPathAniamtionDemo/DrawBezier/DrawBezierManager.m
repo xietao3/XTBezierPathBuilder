@@ -25,8 +25,6 @@
 // 手动加的点的集合
 @property (nonatomic, weak) NSArray *touchPoints;
 
-@property (nonatomic, weak) UIView *bezierView;
-
 @property (nonatomic, strong) NSMutableArray *tempBezierPathPoints;
 
 @end
@@ -62,7 +60,6 @@
     [_subLevelPoints removeAllObjects];
     [_bezierPathPoints removeAllObjects];
     [self updateViewDisplay];
-
 }
 
 - (void)startDrawDisplayLinkWithTouchPoints:(NSArray *)touchPoints {

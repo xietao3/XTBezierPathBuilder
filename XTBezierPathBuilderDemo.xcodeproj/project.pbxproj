@@ -11,12 +11,15 @@
 		93592A761EEE8B5B0052FCD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93592A671EEE8B5B0052FCD0 /* Assets.xcassets */; };
 		93592A771EEE8B5B0052FCD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93592A681EEE8B5B0052FCD0 /* LaunchScreen.storyboard */; };
 		93592A781EEE8B5B0052FCD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93592A6A1EEE8B5B0052FCD0 /* Main.storyboard */; };
-		93592A791EEE8B5B0052FCD0 /* DrawBezierManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93592A6D1EEE8B5B0052FCD0 /* DrawBezierManager.m */; };
-		93592A7A1EEE8B5B0052FCD0 /* DrawBezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93592A6F1EEE8B5B0052FCD0 /* DrawBezierView.m */; };
-		93592A7B1EEE8B5B0052FCD0 /* DrawBezierView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93592A701EEE8B5B0052FCD0 /* DrawBezierView.xib */; };
 		93592A7C1EEE8B5B0052FCD0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 93592A711EEE8B5B0052FCD0 /* Info.plist */; };
 		93592A7D1EEE8B5B0052FCD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93592A721EEE8B5B0052FCD0 /* main.m */; };
 		93592A7E1EEE8B5B0052FCD0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93592A741EEE8B5B0052FCD0 /* ViewController.m */; };
+		936EB1ED1EEEEC4700C536C1 /* DrawBezierManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EB1E91EEEEC4700C536C1 /* DrawBezierManager.m */; };
+		936EB1EE1EEEEC4700C536C1 /* DrawBezierView.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EB1EB1EEEEC4700C536C1 /* DrawBezierView.m */; };
+		936EB1EF1EEEEC4700C536C1 /* DrawBezierView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 936EB1EC1EEEEC4700C536C1 /* DrawBezierView.xib */; };
+		936EB1F21EEEEC7600C536C1 /* DrawBezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EB1F11EEEEC7600C536C1 /* DrawBezierViewController.m */; };
+		936EB1F61EEEF22300C536C1 /* XTBezierPathProducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EB1F51EEEF22300C536C1 /* XTBezierPathProducer.m */; };
+		936EB1F91EEEF3EE00C536C1 /* CurveChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EB1F81EEEF3EE00C536C1 /* CurveChartViewController.m */; };
 		93B871C91EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871C81EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m */; };
 		93B871D41EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871D31EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m */; };
 /* End PBXBuildFile section */
@@ -44,15 +47,21 @@
 		93592A671EEE8B5B0052FCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93592A691EEE8B5B0052FCD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93592A6B1EEE8B5B0052FCD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		93592A6C1EEE8B5B0052FCD0 /* DrawBezierManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierManager.h; sourceTree = "<group>"; };
-		93592A6D1EEE8B5B0052FCD0 /* DrawBezierManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierManager.m; sourceTree = "<group>"; };
-		93592A6E1EEE8B5B0052FCD0 /* DrawBezierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierView.h; sourceTree = "<group>"; };
-		93592A6F1EEE8B5B0052FCD0 /* DrawBezierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierView.m; sourceTree = "<group>"; };
-		93592A701EEE8B5B0052FCD0 /* DrawBezierView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawBezierView.xib; sourceTree = "<group>"; };
 		93592A711EEE8B5B0052FCD0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93592A721EEE8B5B0052FCD0 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93592A731EEE8B5B0052FCD0 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		93592A741EEE8B5B0052FCD0 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		936EB1E81EEEEC4700C536C1 /* DrawBezierManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierManager.h; sourceTree = "<group>"; };
+		936EB1E91EEEEC4700C536C1 /* DrawBezierManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierManager.m; sourceTree = "<group>"; };
+		936EB1EA1EEEEC4700C536C1 /* DrawBezierView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierView.h; sourceTree = "<group>"; };
+		936EB1EB1EEEEC4700C536C1 /* DrawBezierView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierView.m; sourceTree = "<group>"; };
+		936EB1EC1EEEEC4700C536C1 /* DrawBezierView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DrawBezierView.xib; sourceTree = "<group>"; };
+		936EB1F01EEEEC7600C536C1 /* DrawBezierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawBezierViewController.h; sourceTree = "<group>"; };
+		936EB1F11EEEEC7600C536C1 /* DrawBezierViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawBezierViewController.m; sourceTree = "<group>"; };
+		936EB1F41EEEF22300C536C1 /* XTBezierPathProducer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XTBezierPathProducer.h; sourceTree = "<group>"; };
+		936EB1F51EEEF22300C536C1 /* XTBezierPathProducer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTBezierPathProducer.m; sourceTree = "<group>"; };
+		936EB1F71EEEF3EE00C536C1 /* CurveChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurveChartViewController.h; sourceTree = "<group>"; };
+		936EB1F81EEEF3EE00C536C1 /* CurveChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurveChartViewController.m; sourceTree = "<group>"; };
 		93B871AB1EE6AC87009BBD34 /* XTBezierPathBuilderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTBezierPathBuilderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B871C41EE6AC87009BBD34 /* XTBezierPathBuilderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTBezierPathBuilderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B871C81EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTPathAniamtionDemoTests.m; sourceTree = "<group>"; };
@@ -92,21 +101,43 @@
 			children = (
 				93592A651EEE8B5B0052FCD0 /* AppDelegate.h */,
 				93592A661EEE8B5B0052FCD0 /* AppDelegate.m */,
-				93592A671EEE8B5B0052FCD0 /* Assets.xcassets */,
-				93592A681EEE8B5B0052FCD0 /* LaunchScreen.storyboard */,
-				93592A6A1EEE8B5B0052FCD0 /* Main.storyboard */,
-				93592A6C1EEE8B5B0052FCD0 /* DrawBezierManager.h */,
-				93592A6D1EEE8B5B0052FCD0 /* DrawBezierManager.m */,
-				93592A6E1EEE8B5B0052FCD0 /* DrawBezierView.h */,
-				93592A6F1EEE8B5B0052FCD0 /* DrawBezierView.m */,
-				93592A701EEE8B5B0052FCD0 /* DrawBezierView.xib */,
-				93592A711EEE8B5B0052FCD0 /* Info.plist */,
-				93592A721EEE8B5B0052FCD0 /* main.m */,
+				936EB1F31EEEF20500C536C1 /* BezierPathProducer */,
+				936EB1E71EEEEC4700C536C1 /* DrawBezier */,
 				93592A731EEE8B5B0052FCD0 /* ViewController.h */,
 				93592A741EEE8B5B0052FCD0 /* ViewController.m */,
+				936EB1F01EEEEC7600C536C1 /* DrawBezierViewController.h */,
+				936EB1F11EEEEC7600C536C1 /* DrawBezierViewController.m */,
+				936EB1F71EEEF3EE00C536C1 /* CurveChartViewController.h */,
+				936EB1F81EEEF3EE00C536C1 /* CurveChartViewController.m */,
+				93592A6A1EEE8B5B0052FCD0 /* Main.storyboard */,
+				93592A711EEE8B5B0052FCD0 /* Info.plist */,
+				93592A721EEE8B5B0052FCD0 /* main.m */,
+				93592A681EEE8B5B0052FCD0 /* LaunchScreen.storyboard */,
+				93592A671EEE8B5B0052FCD0 /* Assets.xcassets */,
 			);
 			name = XTBezierPathBuilderDemo;
 			path = XTPathAniamtionDemo;
+			sourceTree = "<group>";
+		};
+		936EB1E71EEEEC4700C536C1 /* DrawBezier */ = {
+			isa = PBXGroup;
+			children = (
+				936EB1E81EEEEC4700C536C1 /* DrawBezierManager.h */,
+				936EB1E91EEEEC4700C536C1 /* DrawBezierManager.m */,
+				936EB1EA1EEEEC4700C536C1 /* DrawBezierView.h */,
+				936EB1EB1EEEEC4700C536C1 /* DrawBezierView.m */,
+				936EB1EC1EEEEC4700C536C1 /* DrawBezierView.xib */,
+			);
+			path = DrawBezier;
+			sourceTree = "<group>";
+		};
+		936EB1F31EEEF20500C536C1 /* BezierPathProducer */ = {
+			isa = PBXGroup;
+			children = (
+				936EB1F41EEEF22300C536C1 /* XTBezierPathProducer.h */,
+				936EB1F51EEEF22300C536C1 /* XTBezierPathProducer.m */,
+			);
+			path = BezierPathProducer;
 			sourceTree = "<group>";
 		};
 		93B871A21EE6AC87009BBD34 = {
@@ -255,10 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				93592A781EEE8B5B0052FCD0 /* Main.storyboard in Resources */,
+				936EB1EF1EEEEC4700C536C1 /* DrawBezierView.xib in Resources */,
 				93592A771EEE8B5B0052FCD0 /* LaunchScreen.storyboard in Resources */,
 				93592A761EEE8B5B0052FCD0 /* Assets.xcassets in Resources */,
 				93592A7C1EEE8B5B0052FCD0 /* Info.plist in Resources */,
-				93592A7B1EEE8B5B0052FCD0 /* DrawBezierView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,10 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936EB1F61EEEF22300C536C1 /* XTBezierPathProducer.m in Sources */,
+				936EB1EE1EEEEC4700C536C1 /* DrawBezierView.m in Sources */,
+				936EB1ED1EEEEC4700C536C1 /* DrawBezierManager.m in Sources */,
+				936EB1F91EEEF3EE00C536C1 /* CurveChartViewController.m in Sources */,
 				93592A751EEE8B5B0052FCD0 /* AppDelegate.m in Sources */,
+				936EB1F21EEEEC7600C536C1 /* DrawBezierViewController.m in Sources */,
 				93592A7E1EEE8B5B0052FCD0 /* ViewController.m in Sources */,
-				93592A7A1EEE8B5B0052FCD0 /* DrawBezierView.m in Sources */,
-				93592A791EEE8B5B0052FCD0 /* DrawBezierManager.m in Sources */,
 				93592A7D1EEE8B5B0052FCD0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

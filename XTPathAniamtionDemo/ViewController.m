@@ -7,13 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "DrawBezierView.h"
+#import "DrawBezierViewController.h"
+#import "CurveChartViewController.h"
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *bezierLevelLabel;
-
-@property (nonatomic, strong) DrawBezierView *bezierView;
+@property (nonatomic, strong) NSArray *titleList;
 
 @end
 
@@ -22,8 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _bezierView = [[DrawBezierView alloc] initWithFrame:CGRectMake(0, 60, self.view.bounds.size.width, self.view.bounds.size.height-60)];
-    [self.view addSubview:_bezierView];
+    _titleList = @[@"绘制贝塞尔曲线",@"曲线图",@"过山车"];
     
 
 }
@@ -31,21 +29,58 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - IBAction
-- (IBAction)stepperValueChangedAction:(id)sender {
-    UIStepper *stepper = sender;
-    _bezierLevelLabel.text = [NSString stringWithFormat:@"%.0f阶",stepper.value-1];
-    [_bezierView updatePointNumber:stepper.value];
-}
 
 
-- (IBAction)sliderValueChanged:(id)sender {
-    UISlider *stepper = sender;
-    [_bezierView setBezierProgress:stepper.value];
 }
+
+#pragma mark - UITableViewDataSource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _titleList.count;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 44;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *cellIdentifier = @"cellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    }
+    cell.textLabel.text = _titleList[indexPath.row];
+    
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    // doSomething
+
+    if (indexPath.row == 0) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        DrawBezierViewController *goVC = [storyboard instantiateViewControllerWithIdentifier:@"DrawBezierViewController"];
+        [self.navigationController pushViewController:goVC animated:YES];
+
+    }else if (indexPath.row == 1) {
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        CurveChartViewController *goVC = [storyboard instantiateViewControllerWithIdentifier:@"CurveChartViewController"];
+        [self.navigationController pushViewController:goVC animated:YES];
+
+    }else if (indexPath.row == 2) {
+
+    }
+
+}
+
+
 
 
 
