@@ -44,7 +44,7 @@
 }
 
 - (IBAction)startAction:(id)sender {
-    
+    [_mView fire];
 }
 
 - (IBAction)clearAction:(id)sender {

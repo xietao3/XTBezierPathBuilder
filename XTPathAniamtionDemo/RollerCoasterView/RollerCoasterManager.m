@@ -13,12 +13,12 @@
 // 发动机
 @property (nonatomic, strong) CADisplayLink *displayLink;
 // 进度
-@property (nonatomic, assign) CGFloat progress;
+@property (nonatomic, assign) NSInteger progress;
 // 速度
 @property (nonatomic, assign) CGFloat speed;
 
 
-@property (nonatomic, weak) NSArray *bezierPoints;
+@property (nonatomic, strong) NSMutableArray *bezierPoints;
 
 @end
 
@@ -40,14 +40,18 @@
     [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
     //    _displayLink.preferredFramesPerSecond = 60;
     _displayLink.paused = YES;
-    
+    _bezierPoints = [[NSMutableArray alloc] init];
     _progress = 0;
-    _speed = 0.01;
+    _speed = 1;
 }
 
 #pragma mark - PublicMethod
 - (void)startDrawDisplayLinkWithBezierPoints:(NSArray *)bezierPoints {
-    _bezierPoints = bezierPoints;
+    [_bezierPoints removeAllObjects];
+    for (NSArray *arr in bezierPoints) {
+        [_bezierPoints addObjectsFromArray:arr];
+    }
+
     _progress = 0;
     _displayLink.paused = NO;
 }
@@ -64,18 +68,25 @@
 - (void)updateDisplayLink {
     [self checkDisplayLineStop];
     
-
+    [self updateViewDisplay];
     _progress+=_speed;
     
 }
 
 - (void)checkDisplayLineStop {
-    if (_progress > 1.0) {
+    NSInteger final = _bezierPoints.count-1;
+    if (_progress > final) {
         // 结束后 强行归1
         self.displayLink.paused = YES;
-        _progress = 1.0;
+        _progress = final;
         [self updateDisplayLink];
         
+    }
+}
+
+- (void)updateViewDisplay {
+    if (_updateCarPositionBlock) {
+        _updateCarPositionBlock(_bezierPoints[MIN(_progress, _bezierPoints.count-1)]);
     }
 }
 

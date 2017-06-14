@@ -38,20 +38,25 @@ static const NSInteger pointRadius = 3.0;
 }
 
 - (void)initial {
+    __weak typeof(self) weakSelf = self;
     _touchPoints = [[NSMutableArray alloc] init];
     _allTouchPoints = [[NSMutableArray alloc] init];
     _manager = [[RollerCoasterManager alloc] init];
+    _manager.updateCarPositionBlock = ^(NSValue *posotion){
+        [weakSelf.carImageView setCenter:posotion.CGPointValue];
+    };
     
-    _carImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 25, 20)];
+    _carImageView = [[UIImageView alloc] initWithFrame:CGRectMake(-25, -20, 25, 20)];
     [_carImageView setImage:[UIImage imageNamed:@"Car"]];
     [self addSubview:_carImageView];
+    _carImageView.hidden = YES;
 
 }
 
 #pragma mark - PublicMethod
 - (void)cleanPointsAndReloadView {
     if (![_manager drawDisplayLinkPaused]) return;
-
+    _carImageView.hidden = YES;
     [_touchPoints removeAllObjects];
     [_allTouchPoints removeAllObjects];
     [self setNeedsDisplay];
@@ -59,19 +64,21 @@ static const NSInteger pointRadius = 3.0;
 
 - (void)switchNewBezierLine {
     if (![_manager drawDisplayLinkPaused]) return;
-
+    if (_touchPoints.count == 0) return;
+    
     id lastObj = [_touchPoints lastObject];
     NSArray *bezierPathPoints = [XTBezierPathProducer getBezierPathWithPoints:_touchPoints];
     [_allTouchPoints addObject:bezierPathPoints];
     [_touchPoints removeAllObjects];
     [_touchPoints addObject:lastObj];
     [self setNeedsDisplay];
+
 }
 
-- (void)startFire {
+- (void)fire {
     if (![_manager drawDisplayLinkPaused]) return;
-
     [_manager startDrawDisplayLinkWithBezierPoints:_allTouchPoints];
+    _carImageView.hidden = NO;
 }
 
 #pragma mark - PrivateMethod

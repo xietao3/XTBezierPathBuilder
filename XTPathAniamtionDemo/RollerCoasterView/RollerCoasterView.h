@@ -15,5 +15,5 @@
 - (void)switchNewBezierLine;
 
 
-- (void)startFire;
+- (void)fire;
 @end
