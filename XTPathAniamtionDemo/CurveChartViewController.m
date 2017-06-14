@@ -8,8 +8,13 @@
 
 #import "CurveChartViewController.h"
 #import "XTBezierPathProducer.h"
+#import "ChartView.h"
 
 @interface CurveChartViewController ()
+
+@property (strong, nonatomic) IBOutlet UISegmentedControl *mSegmentControl;
+
+@property (nonatomic, strong) ChartView *chartView;
 
 @end
 
@@ -17,12 +22,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [XTBezierPathProducer getBezierPathWithPoints:@[]];
+    [self.navigationItem setTitleView:self.mSegmentControl];
+    _chartView = [[ChartView alloc] initWithFrame:CGRectMake(0,
+                                                                       60,
+                                                                       self.view.bounds.size.width,
+                                                                       self.view.bounds.size.height-60)];
+    _chartView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:_chartView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)segmentValueChanged:(id)sender {
+    UISegmentedControl *segmentControl = sender;
+    _chartView.isCurveLine = segmentControl.selectedSegmentIndex == 0;
+    [_chartView cleanPointsAndReloadView];
 }
 
 /*

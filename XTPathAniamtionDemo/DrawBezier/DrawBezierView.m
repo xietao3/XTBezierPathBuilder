@@ -36,8 +36,7 @@ static const NSInteger pointRadius = 3.0;
 
 @implementation DrawBezierView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     self = [[[NSBundle mainBundle] loadNibNamed:@"DrawBezierView" owner:nil options:nil] objectAtIndex:0];
     if (self) {
@@ -62,6 +61,7 @@ static const NSInteger pointRadius = 3.0;
         weakSelf.bezierPathPoints = bezierPathPoints;
         [weakSelf setNeedsDisplay];
     };
+    
 }
 
 #pragma mark - PublicMethod

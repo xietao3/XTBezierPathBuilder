@@ -22,7 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setTitle:@"点击空白处设置"];
-    _bezierView = [[DrawBezierView alloc] initWithFrame:CGRectMake(0, 60, self.view.bounds.size.width, self.view.bounds.size.height-60)];
+    _bezierView = [[DrawBezierView alloc] initWithFrame:CGRectMake(0,
+                                                                   60,
+                                                                   self.view.bounds.size.width,
+                                                                   self.view.bounds.size.height-60)];
     [self.view addSubview:_bezierView];
     [self.view sendSubviewToBack:_bezierView];
 }

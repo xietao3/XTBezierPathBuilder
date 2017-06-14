@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "DrawBezierViewController.h"
 #import "CurveChartViewController.h"
+#import "RollerCoasterViewController.h"
 
 @interface ViewController ()
 
@@ -21,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _titleList = @[@"绘制贝塞尔曲线",@"曲线图",@"过山车"];
+    _titleList = @[@"绘制贝塞尔曲线",@"简易曲线图",@"过山车"];
     
 
 }
@@ -75,6 +76,9 @@
         [self.navigationController pushViewController:goVC animated:YES];
 
     }else if (indexPath.row == 2) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        RollerCoasterViewController *goVC = [storyboard instantiateViewControllerWithIdentifier:@"RollerCoasterViewController"];
+        [self.navigationController pushViewController:goVC animated:YES];
 
     }
 

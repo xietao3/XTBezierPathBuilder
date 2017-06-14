@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9323EC2A1EF1400E0059E4CC /* RollerCoasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9323EC291EF1400E0059E4CC /* RollerCoasterViewController.m */; };
+		9323EC2E1EF149180059E4CC /* RollerCoasterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9323EC2D1EF149180059E4CC /* RollerCoasterView.m */; };
+		9339867A1EEFBC400015E6A7 /* ChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 933986791EEFBC400015E6A7 /* ChartView.m */; };
 		93592A751EEE8B5B0052FCD0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93592A661EEE8B5B0052FCD0 /* AppDelegate.m */; };
 		93592A761EEE8B5B0052FCD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93592A671EEE8B5B0052FCD0 /* Assets.xcassets */; };
 		93592A771EEE8B5B0052FCD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93592A681EEE8B5B0052FCD0 /* LaunchScreen.storyboard */; };
@@ -20,6 +23,7 @@
 		936EB1F21EEEEC7600C536C1 /* DrawBezierViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EB1F11EEEEC7600C536C1 /* DrawBezierViewController.m */; };
 		936EB1F61EEEF22300C536C1 /* XTBezierPathProducer.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EB1F51EEEF22300C536C1 /* XTBezierPathProducer.m */; };
 		936EB1F91EEEF3EE00C536C1 /* CurveChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 936EB1F81EEEF3EE00C536C1 /* CurveChartViewController.m */; };
+		937C69CD1EF196BF00A9DF7A /* RollerCoasterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 937C69CC1EF196BF00A9DF7A /* RollerCoasterManager.m */; };
 		93B871C91EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871C81EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m */; };
 		93B871D41EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B871D31EE6AC87009BBD34 /* XTPathAniamtionDemoUITests.m */; };
 /* End PBXBuildFile section */
@@ -42,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9323EC281EF1400E0059E4CC /* RollerCoasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollerCoasterViewController.h; sourceTree = "<group>"; };
+		9323EC291EF1400E0059E4CC /* RollerCoasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollerCoasterViewController.m; sourceTree = "<group>"; };
+		9323EC2C1EF149180059E4CC /* RollerCoasterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollerCoasterView.h; sourceTree = "<group>"; };
+		9323EC2D1EF149180059E4CC /* RollerCoasterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollerCoasterView.m; sourceTree = "<group>"; };
+		933986781EEFBC400015E6A7 /* ChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartView.h; sourceTree = "<group>"; };
+		933986791EEFBC400015E6A7 /* ChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartView.m; sourceTree = "<group>"; };
 		93592A651EEE8B5B0052FCD0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93592A661EEE8B5B0052FCD0 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		93592A671EEE8B5B0052FCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +72,8 @@
 		936EB1F51EEEF22300C536C1 /* XTBezierPathProducer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XTBezierPathProducer.m; sourceTree = "<group>"; };
 		936EB1F71EEEF3EE00C536C1 /* CurveChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurveChartViewController.h; sourceTree = "<group>"; };
 		936EB1F81EEEF3EE00C536C1 /* CurveChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurveChartViewController.m; sourceTree = "<group>"; };
+		937C69CB1EF196BF00A9DF7A /* RollerCoasterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RollerCoasterManager.h; sourceTree = "<group>"; };
+		937C69CC1EF196BF00A9DF7A /* RollerCoasterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RollerCoasterManager.m; sourceTree = "<group>"; };
 		93B871AB1EE6AC87009BBD34 /* XTBezierPathBuilderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTBezierPathBuilderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B871C41EE6AC87009BBD34 /* XTBezierPathBuilderDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XTBezierPathBuilderDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93B871C81EE6AC87009BBD34 /* XTPathAniamtionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XTPathAniamtionDemoTests.m; sourceTree = "<group>"; };
@@ -96,19 +108,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9323EC2B1EF145890059E4CC /* RollerCoasterView */ = {
+			isa = PBXGroup;
+			children = (
+				9323EC2C1EF149180059E4CC /* RollerCoasterView.h */,
+				9323EC2D1EF149180059E4CC /* RollerCoasterView.m */,
+				937C69CB1EF196BF00A9DF7A /* RollerCoasterManager.h */,
+				937C69CC1EF196BF00A9DF7A /* RollerCoasterManager.m */,
+			);
+			path = RollerCoasterView;
+			sourceTree = "<group>";
+		};
+		933986771EEFBC2B0015E6A7 /* ChartView */ = {
+			isa = PBXGroup;
+			children = (
+				933986781EEFBC400015E6A7 /* ChartView.h */,
+				933986791EEFBC400015E6A7 /* ChartView.m */,
+			);
+			name = ChartView;
+			path = Chart;
+			sourceTree = "<group>";
+		};
 		93592A641EEE8B5B0052FCD0 /* XTBezierPathBuilderDemo */ = {
 			isa = PBXGroup;
 			children = (
 				93592A651EEE8B5B0052FCD0 /* AppDelegate.h */,
 				93592A661EEE8B5B0052FCD0 /* AppDelegate.m */,
+				9323EC2B1EF145890059E4CC /* RollerCoasterView */,
+				933986771EEFBC2B0015E6A7 /* ChartView */,
 				936EB1F31EEEF20500C536C1 /* BezierPathProducer */,
-				936EB1E71EEEEC4700C536C1 /* DrawBezier */,
+				936EB1E71EEEEC4700C536C1 /* DrawBezierView */,
 				93592A731EEE8B5B0052FCD0 /* ViewController.h */,
 				93592A741EEE8B5B0052FCD0 /* ViewController.m */,
 				936EB1F01EEEEC7600C536C1 /* DrawBezierViewController.h */,
 				936EB1F11EEEEC7600C536C1 /* DrawBezierViewController.m */,
 				936EB1F71EEEF3EE00C536C1 /* CurveChartViewController.h */,
 				936EB1F81EEEF3EE00C536C1 /* CurveChartViewController.m */,
+				9323EC281EF1400E0059E4CC /* RollerCoasterViewController.h */,
+				9323EC291EF1400E0059E4CC /* RollerCoasterViewController.m */,
 				93592A6A1EEE8B5B0052FCD0 /* Main.storyboard */,
 				93592A711EEE8B5B0052FCD0 /* Info.plist */,
 				93592A721EEE8B5B0052FCD0 /* main.m */,
@@ -119,7 +156,7 @@
 			path = XTPathAniamtionDemo;
 			sourceTree = "<group>";
 		};
-		936EB1E71EEEEC4700C536C1 /* DrawBezier */ = {
+		936EB1E71EEEEC4700C536C1 /* DrawBezierView */ = {
 			isa = PBXGroup;
 			children = (
 				936EB1E81EEEEC4700C536C1 /* DrawBezierManager.h */,
@@ -128,6 +165,7 @@
 				936EB1EB1EEEEC4700C536C1 /* DrawBezierView.m */,
 				936EB1EC1EEEEC4700C536C1 /* DrawBezierView.xib */,
 			);
+			name = DrawBezierView;
 			path = DrawBezier;
 			sourceTree = "<group>";
 		};
@@ -316,10 +354,14 @@
 			files = (
 				936EB1F61EEEF22300C536C1 /* XTBezierPathProducer.m in Sources */,
 				936EB1EE1EEEEC4700C536C1 /* DrawBezierView.m in Sources */,
+				9323EC2A1EF1400E0059E4CC /* RollerCoasterViewController.m in Sources */,
+				9339867A1EEFBC400015E6A7 /* ChartView.m in Sources */,
+				9323EC2E1EF149180059E4CC /* RollerCoasterView.m in Sources */,
 				936EB1ED1EEEEC4700C536C1 /* DrawBezierManager.m in Sources */,
 				936EB1F91EEEF3EE00C536C1 /* CurveChartViewController.m in Sources */,
 				93592A751EEE8B5B0052FCD0 /* AppDelegate.m in Sources */,
 				936EB1F21EEEEC7600C536C1 /* DrawBezierViewController.m in Sources */,
+				937C69CD1EF196BF00A9DF7A /* RollerCoasterManager.m in Sources */,
 				93592A7E1EEE8B5B0052FCD0 /* ViewController.m in Sources */,
 				93592A7D1EEE8B5B0052FCD0 /* main.m in Sources */,
 			);
