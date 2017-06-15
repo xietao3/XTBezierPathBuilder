@@ -73,7 +73,7 @@ static const NSInteger pointRadius = 3.0;
 
 - (void)switchNewBezierLine {
     if (![_manager drawDisplayLinkPaused]) return;
-    if (_touchPoints.count == 0) return;
+    if (_touchPoints.count <= 1) return;
     
     id lastObj = [_touchPoints lastObject];
     NSArray *bezierPathPoints = [XTBezierPathProducer getBezierPathWithPoints:_touchPoints];
@@ -86,6 +86,7 @@ static const NSInteger pointRadius = 3.0;
 
 - (void)fire {
     if (![_manager drawDisplayLinkPaused]) return;
+    if (_allTouchPoints.count == 0) return;
     [_manager startDrawDisplayLinkWithBezierPoints:_allTouchPoints];
     _carImageView.hidden = NO;
     _lastPoint = CGPointMake(0, 0);

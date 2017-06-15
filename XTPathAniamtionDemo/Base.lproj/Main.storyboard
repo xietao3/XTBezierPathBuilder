@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bFE-9w-Pd5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bFE-9w-Pd5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -250,34 +250,34 @@
                                         </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pU5-Le-zPK">
-                                        <rect key="frame" x="20" y="45" width="50" height="30"/>
+                                        <rect key="frame" x="20" y="45" width="80" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="50" id="L6v-qX-zPx"/>
+                                            <constraint firstAttribute="width" constant="80" id="L6v-qX-zPx"/>
                                             <constraint firstAttribute="height" constant="30" id="e2z-zB-Xcg"/>
                                         </constraints>
-                                        <state key="normal" title="new"/>
+                                        <state key="normal" title="另起一根线"/>
                                         <connections>
                                             <action selector="newAction:" destination="LzW-GB-6JS" eventType="touchUpInside" id="M4G-gV-pwP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xQ-x8-XQN">
-                                        <rect key="frame" x="160" y="45" width="50" height="30"/>
+                                        <rect key="frame" x="220" y="45" width="80" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ZJr-zp-rWy"/>
-                                            <constraint firstAttribute="width" constant="50" id="yHC-Np-Jse"/>
+                                            <constraint firstAttribute="width" constant="80" id="yHC-Np-Jse"/>
                                         </constraints>
-                                        <state key="normal" title="clear"/>
+                                        <state key="normal" title="清理"/>
                                         <connections>
                                             <action selector="clearAction:" destination="LzW-GB-6JS" eventType="touchUpInside" id="T97-f1-PXK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9m-Ht-A6C">
-                                        <rect key="frame" x="90" y="45" width="50" height="30"/>
+                                        <rect key="frame" x="120" y="45" width="80" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="8fM-i3-YH7"/>
-                                            <constraint firstAttribute="width" constant="50" id="P0m-ee-Kql"/>
+                                            <constraint firstAttribute="width" constant="80" id="P0m-ee-Kql"/>
                                         </constraints>
-                                        <state key="normal" title="start"/>
+                                        <state key="normal" title="发车"/>
                                         <connections>
                                             <action selector="startAction:" destination="LzW-GB-6JS" eventType="touchUpInside" id="tPz-Yr-tMF"/>
                                         </connections>
