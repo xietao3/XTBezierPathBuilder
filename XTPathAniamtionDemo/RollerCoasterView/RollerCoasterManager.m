@@ -38,7 +38,7 @@
     
     _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(updateDisplayLink)];
     [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
-    //    _displayLink.preferredFramesPerSecond = 60;
+    _displayLink.preferredFramesPerSecond = 30;
     _displayLink.paused = YES;
     _bezierPoints = [[NSMutableArray alloc] init];
     _progress = 0;

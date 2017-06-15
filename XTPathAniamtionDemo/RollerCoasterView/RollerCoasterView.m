@@ -24,6 +24,8 @@ static const NSInteger pointRadius = 3.0;
 
 @property (nonatomic, strong) UIImageView *carImageView;
 
+@property (nonatomic, assign) CGPoint lastPoint;
+
 @end
 
 @implementation RollerCoasterView
@@ -42,11 +44,18 @@ static const NSInteger pointRadius = 3.0;
     _touchPoints = [[NSMutableArray alloc] init];
     _allTouchPoints = [[NSMutableArray alloc] init];
     _manager = [[RollerCoasterManager alloc] init];
-    _manager.updateCarPositionBlock = ^(NSValue *posotion){
-        [weakSelf.carImageView setCenter:posotion.CGPointValue];
+    
+    _manager.updateCarPositionBlock = ^(NSValue *pointValue){
+        CGPoint point = pointValue.CGPointValue;
+        if (weakSelf.lastPoint.x != 0 && weakSelf.lastPoint.y != 0) {
+            CGFloat angle = [weakSelf angleForStartPoint:weakSelf.lastPoint EndPoint:point];
+            weakSelf.carImageView.transform = CGAffineTransformMakeRotation(angle);
+        }
+        [weakSelf.carImageView setCenter:point];
+        weakSelf.lastPoint = point;
     };
     
-    _carImageView = [[UIImageView alloc] initWithFrame:CGRectMake(-25, -20, 25, 20)];
+    _carImageView = [[UIImageView alloc] initWithFrame:CGRectMake(-25, -20, 25, 40)];
     [_carImageView setImage:[UIImage imageNamed:@"Car"]];
     [self addSubview:_carImageView];
     _carImageView.hidden = YES;
@@ -79,10 +88,32 @@ static const NSInteger pointRadius = 3.0;
     if (![_manager drawDisplayLinkPaused]) return;
     [_manager startDrawDisplayLinkWithBezierPoints:_allTouchPoints];
     _carImageView.hidden = NO;
+    _lastPoint = CGPointMake(0, 0);
 }
 
 #pragma mark - PrivateMethod
-
+/**
+ *  计算角度
+ *  startPoint
+ *  endPoint
+ *  @return 角度
+ */
+-(CGFloat)angleForStartPoint:(CGPoint)startPoint EndPoint:(CGPoint)endPoint{
+    
+    CGPoint Xpoint = CGPointMake(startPoint.x + 100, startPoint.y);
+    
+    CGFloat a = endPoint.x - startPoint.x;
+    CGFloat b = endPoint.y - startPoint.y;
+    CGFloat c = Xpoint.x - startPoint.x;
+    CGFloat d = Xpoint.y - startPoint.y;
+    
+    CGFloat rads = acos(((a*c) + (b*d)) / ((sqrt(a*a + b*b)) * (sqrt(c*c + d*d))));
+    
+    if (startPoint.y>endPoint.y) {
+        rads = -rads;
+    }
+    return rads;
+}
 
 
 #pragma mark - DrawMethod
