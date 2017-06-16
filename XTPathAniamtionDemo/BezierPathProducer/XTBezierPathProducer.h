@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+@import UIKit;
 
 @interface XTBezierPathProducer : NSObject
 + (NSMutableArray *)getBezierPathWithPoints:(NSArray *)points;
+
++ (CGFloat)getBezierPathLengthWithBezierPathPoints:(NSArray *)bezierPathPoints;
+
 @end

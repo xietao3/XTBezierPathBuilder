@@ -7,17 +7,58 @@
 //
 
 #import "XTBezierPathProducer.h"
-@import UIKit;
 
 @implementation XTBezierPathProducer
 
 + (NSMutableArray *)getBezierPathWithPoints:(NSArray *)points {
+    
+    // 先获取100个点组成的贝塞尔曲线
+    NSMutableArray *preBezierPathPoints = [self getPreBezierPathWithPoints:points];
+    
+    // 获取贝塞尔曲线长度
+    CGFloat length = [self getBezierPathLengthWithBezierPathPoints:preBezierPathPoints];
+    
+    // 根据长度获取分布均匀的贝塞尔曲线
+    NSMutableArray *bezierPathPoints = [self getBezierPathWithPoints:points length:length];
+    
+    return bezierPathPoints;
+}
+
+
+/**
+ 获取100个点组成的贝塞尔曲线
+
+ @param points 原始点集合
+ @return return value description
+ */
++ (NSMutableArray *)getPreBezierPathWithPoints:(NSArray *)points {
+    // 先获取100个点组成的贝塞尔曲线
     NSMutableArray *bezierPathPoints = [[NSMutableArray alloc] init];
     for (float i = 0; i <= 1.0; i+=0.01) {
         [bezierPathPoints addObjectsFromArray:[self getAllPointsWithOriginPoints:points progress:i]];
     }
     return bezierPathPoints;
 }
+
+
+/**
+ 根据长度获取分布均匀的贝塞尔曲线
+
+ @param points 原始点集合
+ @param length 长度
+ @return return value description
+ */
++ (NSMutableArray *)getBezierPathWithPoints:(NSArray *)points length:(CGFloat)length {
+    // 先获取100个点组成的贝塞尔曲线
+    CGFloat speed = 5.0/length;
+    NSMutableArray *bezierPathPoints = [[NSMutableArray alloc] init];
+    for (float i = 0; i <= 1.0; i+=speed) {
+        [bezierPathPoints addObjectsFromArray:[self getAllPointsWithOriginPoints:points progress:i]];
+    }
+    return bezierPathPoints;
+
+}
+
 
 /**
  获取根据touch点衍生出来所有的点
@@ -66,6 +107,33 @@
         [tempArr addObject:[NSValue valueWithCGPoint:currentPoint]];
     }
     return tempArr;
+}
+
+
+/**
+ 获取贝塞尔曲线长度
+
+ @param bezierPathPoints 点集合
+ @return 长度
+ */
++ (CGFloat)getBezierPathLengthWithBezierPathPoints:(NSArray *)bezierPathPoints {
+    CGFloat length = 0;
+    
+    if (bezierPathPoints.count > 1) {
+        for (int i = 0; i < bezierPathPoints.count - 1; i++) {
+            NSValue *preValue = [bezierPathPoints objectAtIndex:i];
+            CGPoint prePoint = preValue.CGPointValue;
+            
+            NSValue *lastValue = [bezierPathPoints objectAtIndex:i+1];
+            CGPoint lastPoint = lastValue.CGPointValue;
+            CGFloat diffX = lastPoint.x-prePoint.x;
+            CGFloat diffY = lastPoint.y-prePoint.y;
+            
+            length+= sqrt(pow(diffX, 2)+pow(diffY, 2));
+
+        }
+    }
+    return length;
 }
 
 @end
