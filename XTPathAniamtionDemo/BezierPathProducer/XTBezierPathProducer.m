@@ -35,7 +35,7 @@
     // 先获取100个点组成的贝塞尔曲线
     NSMutableArray *bezierPathPoints = [[NSMutableArray alloc] init];
     for (float i = 0; i <= 1.0; i+=0.01) {
-        [bezierPathPoints addObjectsFromArray:[self getAllPointsWithOriginPoints:points progress:i]];
+        [bezierPathPoints addObjectsFromArray:[self recursionGetsubLevelPointsWithSuperPoints:points progress:i]];
     }
     return bezierPathPoints;
 }
@@ -52,36 +52,61 @@
     // 先获取100个点组成的贝塞尔曲线
     CGFloat speed = 5.0/length;
     NSMutableArray *bezierPathPoints = [[NSMutableArray alloc] init];
-    for (float i = 0; i <= 1.0; i+=speed) {
-        [bezierPathPoints addObjectsFromArray:[self getAllPointsWithOriginPoints:points progress:i]];
+    for (float i = 0; i <= 1.1; i+=speed) {
+        if (i>1.0) {
+            i = 1.0;
+            [bezierPathPoints addObjectsFromArray:[self recursionGetsubLevelPointsWithSuperPoints:points progress:i]];
+            break;
+        }
+        [bezierPathPoints addObjectsFromArray:[self recursionGetsubLevelPointsWithSuperPoints:points progress:i]];
     }
     return bezierPathPoints;
 
 }
 
 
-/**
- 获取根据touch点衍生出来所有的点
- 
- @param points 手动点击的点
- @param progress 贝塞尔曲线当前进度
- @return pointArray
- */
-+ (NSMutableArray *)getAllPointsWithOriginPoints:(NSArray *)points progress:(CGFloat)progress{
-    NSMutableArray *resultArray = [[NSMutableArray alloc] init];
-    NSInteger level = points.count;
-    
-    NSArray *tempArray = points;
-    for (int i = 0; i < level; i++) {
-        tempArray = [self getsubLevelPointsWithSuperPoints:tempArray progress:progress];
+///**
+// 获取根据touch点衍生出来所有的点
+// 
+// @param points 手动点击的点
+// @param progress 贝塞尔曲线当前进度
+// @return pointArray
+// */
+//+ (NSMutableArray *)getAllPointsWithOriginPoints:(NSArray *)points progress:(CGFloat)progress{
+//    NSMutableArray *resultArray = [[NSMutableArray alloc] init];
+//    NSInteger level = points.count;
+//    
+//    NSArray *tempArray = points;
+//    for (int i = 0; i < level; i++) {
+//        tempArray = [self getsubLevelPointsWithSuperPoints:tempArray progress:progress];
+//
+//        if (tempArray.count == 1) {
+//            // 最终贝塞尔曲线的点
+//            [resultArray addObjectsFromArray:tempArray];
+//            break;
+//        }
+//    }
+//    return resultArray;
+//}
 
-        if (tempArray.count == 1) {
-            // 最终贝塞尔曲线的点
-            [resultArray addObjectsFromArray:tempArray];
-            break;
-        }
+
++ (NSArray *)recursionGetsubLevelPointsWithSuperPoints:(NSArray *)points progress:(CGFloat)progress{
+    if (points.count == 1) return points;
+    
+    NSMutableArray *tempArr = [[NSMutableArray alloc] init];
+    for (int i = 0; i < points.count-1; i++) {
+        NSValue *preValue = [points objectAtIndex:i];
+        CGPoint prePoint = preValue.CGPointValue;
+        
+        NSValue *lastValue = [points objectAtIndex:i+1];
+        CGPoint lastPoint = lastValue.CGPointValue;
+        CGFloat diffX = lastPoint.x-prePoint.x;
+        CGFloat diffY = lastPoint.y-prePoint.y;
+        
+        CGPoint currentPoint = CGPointMake(prePoint.x+diffX*progress, prePoint.y+diffY*progress);
+        [tempArr addObject:[NSValue valueWithCGPoint:currentPoint]];
     }
-    return resultArray;
+    return [self recursionGetsubLevelPointsWithSuperPoints:tempArr progress:progress];
 }
 
 

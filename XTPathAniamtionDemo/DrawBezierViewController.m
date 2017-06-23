@@ -15,6 +15,10 @@
 
 @property (nonatomic, strong) DrawBezierView *bezierView;
 
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+
+@property (weak, nonatomic) IBOutlet UILabel *progressLabel;
+
 @end
 
 @implementation DrawBezierViewController
@@ -28,12 +32,15 @@
                                                                    self.view.bounds.size.height-60)];
     [self.view addSubview:_bezierView];
     [self.view sendSubviewToBack:_bezierView];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - IBAction
 - (IBAction)stepperValueChangedAction:(id)sender {
@@ -46,6 +53,20 @@
 - (IBAction)sliderValueChanged:(id)sender {
     UISlider *stepper = sender;
     [_bezierView setBezierProgress:stepper.value];
+    [_progressLabel setText:[NSString stringWithFormat:@"%.2f",stepper.value]];
+}
+
+- (void)setBezierProgress:(CGFloat)progress {
+    static float tempProgress = 0;
+    [_slider setValue:tempProgress animated:YES];
+    tempProgress+=0.01;
+    NSLog(@"%f",tempProgress);
+    sleep(1.0);
+    
+    if (tempProgress<1.0) {
+        [self setBezierProgress:0];
+    }
+    
 }
 
 @end
