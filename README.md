@@ -1,5 +1,7 @@
-# XTBezierPathBuilderDemo
+# 贝塞尔曲线的绘制原理与应用
+
 ![图来自pexels](http://upload-images.jianshu.io/upload_images/1319710-f68c70b0ca4ac62c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 >说来话长，这一切都得从PhotoShop中的钢笔工具开始说起...
 
 **声明：本文不含复杂数学公式，学渣放心阅读吧😂**(我仿佛看到了学渣们留下了激动的泪水)
